@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    grid-auto-flow: row;
+    place-content: center;
+    background-image:url(../images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.container {
+    
+    background-color: #ffd38c;
+}
+header {
+    position:fixed;
+    top: 0;left: 0;
+    display: flex;
+    /*align-items: center;
+    justify-content: center;*/
+    flex-direction: column;
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+    padding-right: 1rem;
+    background-color:rgba(81, 20, 20,0.92);
+    box-shadow: 0px 5px 5px rgba(3,3,3,0.5);
+    width: 100%;
+    z-index: 1;
+}
+header h1 {
+    text-align: center;
+    color:#ffd38c;
+    font-family:'Times New Roman', Times, serif;
+    letter-spacing: 8px;
+}
+header nav {
+    display: flex;
+    align-items:end;
+    justify-content: end;
+}
+header nav a {
+    margin-right: 2rem;
+    text-decoration: none;
+    color:rgb(255, 238, 231);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: 0.5s;
+}
+header nav a:hover {
+    color: #ffd38c;
+    text-decoration:underline;
+}
+content {
+    position:absolute;
+    top:7rem;
+}
+main {
+    background-color: rgba(255,255,255,0.8);
+    position: relative;
+    margin-top:0.5rem;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content:space-between;
+    z-index: 0;
+    
+}
+main div.photo1 {
+    display: flex;
+    align-items: top center;
+    justify-content: top center;
+    /*justify-content: space-between;*/
+    flex: 1 1 0;
+}
+main div.photo1 div {
+    padding: 0px;
+    vertical-align: top;
+    margin-top: 0px;
+}
+main div.photo1 div p{
+    margin-left:40px;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: justify;
+}
+
+main div.cards {
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+/*--------------- CARDS -------------------*/
+figure {
+    display: grid;
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px gray;
+  }
+  figure > * {
+    grid-area: 1/1;
+    transition: .4s;
+  }
+  figure figcaption {
+    display: grid;
+    align-items: end;
+    font-family: sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0000;
+    padding: .75rem;
+    background: var(--c,#0009);
+    clip-path: inset(0 var(--_i,100%) 0 0);
+    -webkit-mask:
+      linear-gradient(#000 0 0),
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    -webkit-mask-clip: text, padding-box;
+    margin: -1px;
+  }
+  figure:hover figcaption{
+    --_i: 0%;
+  }
+  figure:hover img {
+    transform: scale(2);
+  }
+  @supports not (-webkit-mask-clip: text) {
+    figure figcaption {
+     -webkit-mask: none;
+     color: #fff;
+    }
+  }
+
+/* -------------- FOOTER -------------- */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #444;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+footer div.design {
+    display: flex;
+    align-items: baseline center;
+    justify-content: baseline;
+    flex-direction: column;
+    color: aliceblue;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.8rem;
+}
